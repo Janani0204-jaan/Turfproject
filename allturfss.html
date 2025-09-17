@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+   <link rel="stylesheet" href="{% static 'turfapp/css/style.css' %}">
+    <style>
+       .at1{
+            background-image: url("{% static 'bgim2.jpeg' %}");
+            width: 100%;
+            height: 2500px;
+            margin-top: 100px;
+
+        }
+
+       .at2{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+        padding: 10px;
+       }
+
+        .at3{
+            background-color: whitesmoke;
+            height: 450px;
+            width: 400px;
+            margin-left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+             transition: transform 0.3s ease-in-out;
+
+        }
+
+        .at3 :hover{
+            transform: scale(1.1);
+        }
+        .imgg3{
+             height: 200px;
+            width: 250px;
+
+        }
+
+        button{
+            border: none;
+            border-radius: 50px;
+            background-color: olivedrab;
+            color: whitesmoke;
+            cursor: pointer;
+
+
+        }
+
+        button:hover{
+                 box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+;
+
+        }
+
+        .n1{
+    height: 10vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.527);
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    position: fixed;
+}
+.l1{
+    width: 150px;
+    height: 8vh;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.list li{
+    list-style: none;
+}
+
+.list a{
+    text-decoration: none;
+    padding: 20px;
+    color: whitesmoke;
+    font-weight: 500;
+     transition: transform 0.3s ease-in-out;
+
+}
+.list ul{
+    display: flex;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+.list a:hover{
+    background-color: blueviolet;
+    color: whitesmoke;
+   transform: scale(1.2);
+   border: 2px solid whitesmoke;
+
+}
+.icons{
+
+    margin-top:25px ;
+    margin-left: 70px;
+
+}
+.fa-square-instagram{
+    color: whitesmoke;
+    margin-left: 30px;
+    font-size: 2.1rem;
+
+}
+.fa-phone-volume{
+    color: whitesmoke;
+    margin-left: 50px;
+    font-size: 2rem;
+}
+
+.ready{
+    width: 100%;
+    height: 30vh;
+     background-image: url("{% static 'bgim1.jpeg' %}");
+
+}
+
+.btn{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 600px;
+}
+.btn1{
+      padding: 12px 28px;
+  color: #fff;
+  background-color: #111;
+  border: 2px solid #0ff;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+
+}
+.btn1:hover {
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+}
+
+.btn1 a{
+       text-decoration: none;
+       color: #fff;
+       }
+
+.img3 a{
+        text-decoration: none;
+        color: whitesmoke;
+
+}
+
+.img3 a:hover{
+        color: rgb(64, 64, 222);
+}
+
+
+    </style>
+
+
+
+
+      </head>
+<body>
+{% load static %}
+<link rel="stylesheet" href="{% static 'turf.css' %}"></link>
+         <nav class="n1">
+            <div class="logo"><img src="{% static 'logo.jpg' %}" alt="" class="l1"></div>
+            <div class="list">
+                <ul>
+                    <li><a href="/new">HOME</a></li>
+                    <li><a href="/allturfs">ALL TURFS</a></li>
+                    <li><a href="/book">BOOKING</a></li>
+                    <li><a href="/events">EVENTS</a></li>
+                    <li><a href="/contacts">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="icons">
+                 <i class="fa-brands fa-square-instagram"></i>
+                 <i class="fa-solid fa-phone-volume"></i>
+
+            </div>
+        </nav>
+
+
+
+
+
+
+    <section class="at1">
+        <h1 style="color: whitesmoke;font-weight: bold;margin-left: 500px; font-size: 50px;">EXPLORE TURFS</h1>
+        <div class="at2">
+            {% for turf in turfs %}
+
+            <div class="at3">
+                <div class="img3">
+                    <div style="border: 5px solid black;height: 200px;
+            width: 250px; margin-left: 50px">
+                    <img src="{{ turf.image.url }}" alt="" class="imgg3">
+                    </div>
+                    <h1 style="margin-left: 50px;">{{ turf.name }}</h1> <br>
+                    <p style="margin-left: 40px;">LOCATION : {{ turf.location }}
+
+</p>
+                    <p style="margin-left: 40px;">RATING : ⭐⭐⭐⭐☆ (4.9) </p>
+                    <p>Rate: ₹{{ turf.rate }}</p>
+
+                    <button  style="margin-left: 60px;"><a href="https://www.playspots.in/booking-spot/the-sparks-multisports-near-decathlon-narasingam-madurai-tamil-nadu/">Know more</a></button>
+                    <form method="get" action="{% url 'booking_form' %}">
+      <input type="hidden" name="turf_id" value="{{ turf.id }}">
+      <button type="submit">Book Now</button>
+    </form>
+  </div>
+{% endfor %}
+
+              </div>
+        </div>
+
+        <div>
+

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'turfapp/css/style.css' %}">
+    <style>
+        .eve{
+
+    background-color: rgb(175, 227, 228);
+    height:1100px;
+    width: 100%;
+   }
+
+     .e1{
+    background-color: rgb(218, 180, 233);
+    height:30vh;
+    width: 800px;
+    position:relative;
+    top:100px;
+    left:350px;
+
+}
+        .event-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin: 20px 0;
+  max-width: 800px;
+}
+
+.event-image {
+  width: 40%;
+  object-fit: cover;
+}
+
+.event-details {
+  padding: 20px;
+  flex: 1;
+}
+
+.event-title {
+  margin-top: 0;
+  color: #2E8B57;
+}
+
+.map-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.map-link:hover {
+  text-decoration: underline;
+}
+
+.book-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #2E8B57;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.book-btn:hover {
+  background-color: #246b45;
+}
+        .registration-card {
+  background-color: #ffffff;
+  border: 2px solid #2E8B57;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.reg-title {
+  margin-top: 0;
+  color: #2E8B57;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.reg-info {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.reg-info li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.reg-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2E8B57;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.reg-btn:hover {
+  background-color: #246b45;
+}
+
+
+        @media screen and (max-width: 768px) {
+  .registration-card {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .reg-title {
+    font-size: 20px;
+  }
+
+  .reg-info li {
+    font-size: 15px;
+  }
+
+  .reg-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 30px auto;
+  max-width: 800px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.offer-updates h2 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+.offer-card {
+  background: white;
+  margin: 15px 0;
+  padding: 15px;
+  border-left: 5px solid #27ae60;
+  border-radius: 5px;
+}
+
+.offer-card h3 {
+  margin-top: 0;
+  color: #27ae60;
+}
+
+.offer-card p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.offer-card button {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.offer-card button:hover {
+  background-color: #219150;
+}
+@media screen and (max-width: 768px) {
+  .eve {
+    height: auto;
+    padding: 20px;
+  }
+
+  .event-card {
+    flex-direction: column;
+    max-width: 100%;
+    margin: 20px auto;
+    left: 0 !important;
+    top: 0 !important;
+  }
+
+  .event-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .event-details {
+    padding: 15px;
+  }
+
+  .registration-card {
+    max-width: 95%;
+    padding: 15px;
+    top: 0 !important;
+  }
+
+  .card {
+    margin: 30px auto;
+    max-width: 95%;
+    padding: 15px;
+    margin-left: 0 !important;
+  }
+
+  .offer-card {
+    padding: 15px;
+  }
+
+  .reg-btn,
+  .book-btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .ready h1,
+  .ready p {
+    margin-left: 0 !important;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .btn1 {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    font-size: 18px;
+  }
+
+  .logo img {
+    width: 150px;
+  }
+
+  .list ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .list ul li {
+    margin: 10px 0;
+  }
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+{% load static %}
+<link rel="stylesheet" href="{% static 'turf.css' %}"></link>
+         <nav class="n1">
+            <div class="logo"><img src="{% static 'logo.jpg' %}" alt="" class="l1"></div>
+            <div class="list">
+                <ul>
+                    <li><a href="/new">HOME</a></li>
+                    <li><a href="/allturfs">ALL TURFS</a></li>
+                    <li><a href="/book">BOOKING</a></li>
+                    <li><a href="/events">EVENTS</a></li>
+                    <li><a href="/quick-message">CONTACT</a></li>
+                </ul>
+            </div>
+<!--            <div class="icons">-->
+<!--                 <i class="fa-brands fa-square-instagram"></i>-->
+<!--                 <i class="fa-solid fa-phone-volume"></i>-->
+
+<!--            </div>-->
+        </nav>
+
+
+<section class="eve">
+    {% load static %}
+<div class="event-card" style="position:relative;left:400px;top:150px">
+  <img src="{% static 'football.jpg' %}" alt="Football Event" class="event-image">
+  <div class="event-details">
+    <h3 class="event-title">Madurai Monsoon Football League</h3>
+    <p><strong>Sport Type:</strong> Football</p>
+    <p><strong>Date & Time:</strong> Sept 15, 2025 | 5:00 PM – 9:00 PM</p>
+    <p><strong>Venue:</strong> Turf Zone 3, Madurai</p>
+    <a href="https://www.bing.com/ck/a?!&&p=a01d4024cd966980782011d673e06da467b70e74fd8dd5f740ffbf6dca55f3f8JmltdHM9MTc1NzU0ODgwMA&ptn=3&ver=2&hsh=4&fclid=361a8fc6-0e83-65c3-2b4d-99ef0f2e6403&psq=turfwar&u=a1aHR0cHM6Ly93d3cudHVyZndhcmluZGlhLmluLw" target="_blank" class="map-link">📍 View on Map</a>
+    <a href="/booking?turf_name=THE TURFWAR TURF&turf_rate=1200" class="reg-btn">Book Now</a>
+  </div>
+    </div>
+
+    <div class="registration-card" style="position:relative;top:200px">
+  <h3 class="reg-title">Registration Details</h3>
+  <ul class="reg-info">
+    <li><strong>Entry Fee:</strong> Free / ₹100 per player / Team packages available</li>
+    <li><strong>Booking Deadline:</strong> September 13, 2025</li>
+      <li><strong>Wanna know which turf? <a href="https://www.bing.com/ck/a?!&&p=7fd894b45ce979edf24a362de47299b8e4925c2f98dab66315b1db7f127f08b7JmltdHM9MTc1NzU0ODgwMA&ptn=3&ver=2&hsh=4&fclid=361a8fc6-0e83-65c3-2b4d-99ef0f2e6403&psq=lakx+turf+madurai&u=a1aHR0cHM6Ly9sYWt4NTkuY29tLw">ClICK HERE</a></strong></li>
+  </ul>
+   <a href="/booking?turf_name=THE LAKX TURF&turf_rate=1000" class="reg-btn">Book Now</a>
+</div>
+{% load static%}
+<div class="card" style="margin-top:250px;margin-left:350px; background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <h2 style="text-align: center;
+  color: #2c3e50;">🔥 Turf Offers & Updates</h2>
+  <div class="offer-card" style="  background: white;
+  margin: 15px 0;
+  padding: 15px;
+  border-left: 5px solid #27ae60;
+  border-radius: 5px;">
+    <h3 style="margin-top: 0;
+  color: #27ae60;">Weekend Special: 20% Off</h3>
+    <p style="margin: 10px 0;
+  color: #555;">Book your slot for Saturday or Sunday and enjoy a flat 20% discount. Limited slots available!</p>
+    <a href="/book" class="reg-btn">Book Now</a>
+  </div>
+  <div class="offer-card" style="background: white;
+  margin: 15px 0;
+  padding: 15px;
+  border-left: 5px solid #27ae60;
+  border-radius: 5px;">
+    <h3  style="margin-top: 0;
+  color: #27ae60;">Refer & Earn</h3>
+    <p style="margin: 10px 0;
+  color: #555;">Refer a friend and get ₹100 off your next booking. Your friend gets ₹50 off too!</p>
+    <a href="https://www.bing.com/ck/a?!&&p=ee3ca8a594461c756249f483f8710f0ae402b4c7b116eb3ab1b6246c7c0a7c4cJmltdHM9MTc1NzgwODAwMA&ptn=3&ver=2&hsh=4&fclid=361a8fc6-0e83-65c3-2b4d-99ef0f2e6403&psq=whatsapp&u=a1aHR0cHM6Ly93ZWIud2hhdHNhcHAuY29tLw" class="reg-btn">Refer Now</a>
+  </div>
+</div>
+
+
+
+
+</section>
+
+<footer>
+    <section class="ready">
+       <h1 style="font-size: 30px;color: bisque;margin-left: 600px;">READY TO PLAY!?</h1><br><br>
+       <p style="color: whitesmoke;font-size: 30px;margin-left: 450px;">Find your turf. Book your slot. Let the games begin.
+       <div class="btn">
+        <button class="btn1" ><a href="/booking" style="text-decoration: none;
+       color: #fff;">BOOK NOW</a></button>
+
+        <button class="btn1" style="margin-left: 20px;"><a href="/allturfs" style="text-decoration: none;
+       color: #fff;">EXPLORE TURFS</a></button>
+        </div>
+</p>
+    </section>
+    </footer>
+</body>
+</html>

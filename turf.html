@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turf</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+{% load static %}
+<link rel="stylesheet" href="{% static 'turf.css' %}"></link>
+    <header>
+        <nav class="n1">
+
+            <div class="logo"><img src="{% static 'logo.jpg' %}" alt="Sports Theme"  class="l1">" </div>
+            <div class="list">
+                <ul>
+                    <li><a href="/new">HOME</a></li>
+                    <li><a href="/allturfs">ALL TURFS</a></li>
+                    <li><a href="/book">BOOKING</a></li>
+                    <li><a href="/events">EVENTS</a></li>
+                      <li><a href="/quick-message">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="icons">
+                 <i class="fa-brands fa-square-instagram"></i>
+                 <i class="fa-solid fa-phone-volume"></i>
+                 
+            </div>
+        </nav>
+        <div class="content" style="margin-top: 80px;">
+           <div class="home">
+            <p class="p1"> Welcome to Madurai Turf Hub <img width="48" height="48" src="https://img.icons8.com/color/48/baseball-player-skin-type-2.png" alt="baseball-player-skin-type-2"/><br>
+Your One-Stop Destination for Turf Booking in Madurai</p> 
+<p>Whether you're planning a friendly match, a weekend tournament, or just a casual kickabout, we've got you covered. Madurai Turf Hub brings together all the top-rated turfs in the city—so you can browse, compare, and book your perfect play spot in minutes.
+</p>
+           </div>
+           <div class="imgturf">
+            <img src="{% static 'turf4.jpg' %}" alt="" class="i1">
+           </div>
+           </div>
+    </header>
+    <section class="offer">
+        <h2>WHAT WE OFFER</h2>
+        <div class="dd">
+        <div class="d1"><h3> All Turfs in One Place </h3><br> <br><p>Discover a curated list of Madurai’s best football, cricket, and multi-sport turfs—complete with photos,<br> amenities, and real-time availability.</p><img width="50" height="50" src="https://img.icons8.com/ios/50/trophy--v1.png" alt="trophy--v1"/></div>
+        <div class="d2"><h3>Easy Pre-Booking</h3><br> <br><p>Reserve your slot instantly. No calls, no <br> waiting—just pick your time and play.Built for players, by players. <br>We’re here to make your game days hassle-free and memorable.</p><img width="50" height="50" src="https://img.icons8.com/ios/50/groups.png" alt="groups"/></div>
+        <div class="d3"><h3> Verified Listings</h3><br> <br><p>We partner directly with turf owners <br> to ensure accurate details, <br>
+            fair pricing, and smooth booking experiences. </p><img width="50" height="50" src="https://img.icons8.com/ios/50/checked-identification-documents.png" alt="checked-identification-documents"/></div>
+        </div>
+        <br><br><br>
+        <h2>HOW IT WORKS</h2>
+        <div class="bt">
+            <div class="img2"><img src="{% static 'turf5.png' %}" alt="" class="t5"></div>
+           <div style="margin-left: 40px;font-size: 30px;"><h1>1. Browse Turfs </h1><br>
+             <p>Filter by location, sport type, amenities, or ratings.
+                </p></div>
+        </div>
+
+        <div class="bt">
+            <div class="img2"><img src="{% static 'turf6.jpg' %}"  alt="" class="t5"></div>
+           <div style="margin-left: 40px;font-size: 30px;"><h1>2. Check Availability
+
+ </h1><br>
+             <p>See live time slots and pricing.
+                </p></div>
+        </div>
+
+        <div class="bt">
+            <div class="img2"><img src="{% static 'turf8.jpg' %}"  alt="" class="t5"></div>
+           <div style="margin-left: 40px;font-size: 30px;"><h1>3. Book Instantly
+
+
+ </h1><br>
+             <p>Reserve your turf with just a few clicks.
+                </p></div>
+        </div>
+
+
+        <div class="bt">
+            <div class="img2"><img src="{% static 'turf7.jpg' %}" alt="" class="t5"></div>
+           <div style="margin-left: 40px;font-size: 30px;"><h1>4. Play & Enjoy
+
+
+
+ </h1><br>
+             <p>Show up, gear up, and game on!
+                </p></div>
+        </div>
+    </section >
+    <footer>
+    <section class="ready">
+       <h1 style="font-size: 30px;color: bisque;margin-left: 600px;">READY TO PLAY!?</h1><br><br>
+       <p style="color: whitesmoke;font-size: 30px;margin-left: 450px;">Find your turf. Book your slot. Let the games begin.
+       <div class="btn">
+        <button class="btn1" ><a href="/book" style="text-decoration: none;
+       color: #fff;">BOOK NOW</a></button>
+
+        <button class="btn1" style="margin-left: 20px;"><a href="/allturfs" style="text-decoration: none;
+       color: #fff;">EXPLORE TURFS</a></button>
+        </div>
+</p>
+    </section>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--    {% load static %}-->
+<!--   <link rel="stylesheet" href="{% static 'turfapp/css/style.css' %}">-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<!--<link rel="stylesheet" href="{% static 'turfapp/css/style.css' %}">-->
+
+<style>
+    .get{
+    background: rgb(190, 242, 244);
+    margin-top:100px;
+}
+.iconssoc{
+    padding: 20px;
+    font-size: 30px;
+    cursor: pointer;
+
+}
+.fa-square-instagram:hover{
+    color: aqua;
+}
+.fa-square-whatsapp:hover{
+    color: aqua;
+}
+.fa-square-facebook:hover{
+    color: aqua;
+}
+.fa-square-youtube:hover{
+    color: aqua;
+}
+.fa-square-twitter:hover{
+    color: aqua;
+}
+.fa-envelope:hover{
+    color: aqua;
+}
+.fa-phone-volume{
+    position: relative;
+    left: 140px;
+    bottom: 25px;
+    
+}
+.con{
+   display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+        padding: 10px;
+}
+.c1{
+     height: 200px;
+    width: 450px;
+    background-color: whitesmoke;
+    color: #2c3e50;
+    padding: 10px;
+     border-left: 15px solid #3498db;
+
+}
+.c2{
+      height: 200px;
+    width: 450px;
+    background-color: whitesmoke;
+    color: #2c3e50;
+    padding: 10px;
+    margin-left: 20px;
+     border-left: 15px solid #f993df;
+
+}
+.c3{
+     height: 200px;
+    width: 450px;
+    background-color: whitesmoke;
+    color: #2c3e50;
+    padding: 10px;
+    margin-left: 20px;
+     border-left: 15px solid #66efa3;
+
+}
+.c4{
+      height: 200px;
+    width: 450px;
+    background-color: whitesmoke;
+    color: #2c3e50;
+    padding: 10px;
+     border-left: 15px solid #3498db;
+
+}
+.c5{
+    height: 300px;
+    width: 500px;
+    background-color: whitesmoke;
+    color: #2c3e50;
+    padding: 10px;
+     border-left: 15px solid #3498db;
+
+}
+
+
+.btn4{
+
+    padding: 20px 25px;
+    background-color: #0390b2;
+    color: whitesmoke;
+    border-radius: 600px;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    top:5px;
+    bottom: 700px;
+    left: 20px;
+
+}
+.btn4:hover{
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+     transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      background-color: #0e5c83
+      ;
+
+}
+@media screen and (max-width: 768px) {
+  .get {
+    margin-top: 50px;
+    padding: 10px;
+  }
+
+  .get > div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn4 {
+    font-size: 16px;
+    padding: 15px 20px;
+    left: 0;
+    top: 0;
+    margin-top: 20px;
+  }
+
+  .con {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .c1, .c2, .c3, .c4, .c5 {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .ready h1, .ready p {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .btn1 {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .iconssoc {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .con {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .c1, .c2, .c3, .c4, .c5 {
+    width: 100%;
+  }
+
+  .btn4 {
+    font-size: 18px;
+    padding: 18px 22px;
+    left: 10px;
+  }
+
+  .ready h1, .ready p {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .btn1 {
+    margin: 10px;
+  }
+}
+
+
+</style>
+
+<body>
+{% load static %}
+<link rel="stylesheet" href="{% static 'turf.css' %}"></link>
+         <nav class="n1">
+            <div class="logo"><img src="{% static 'logo.jpg' %}" alt="" class="l1"></div>
+            <div class="list">
+                <ul>
+                    <li><a href="/new">HOME</a></li>
+                    <li><a href="/allturfs">ALL TURFS</a></li>
+                    <li><a href="/booking">BOOKING</a></li>
+                    <li><a href="/events">EVENTS</a></li>
+                 <li><a href="/quick-message">CONTACT</a></li>
+                </ul>
+            </div>
+<!--            <div class="icons">-->
+<!--                 <i class="fa-brands fa-square-instagram"></i>-->
+<!--                 <i class="fa-solid fa-phone-volume"></i>-->
+
+<!--            </div>-->
+        </nav>
+
+
+
+<section class="get">
+        <div style="width: 100%;display: flex;">
+            <div style="padding: 30px;">
+           <!-- <img src="contact.jpg" alt="" height="450px" width="900px">  -->
+            <video width="640" height="360" controls>
+          <source src="turf.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+                </video>
+            </div>
+            <div style="width: 500px;background-color: white; padding: 30px;margin-top: 20px;height: 450px;">
+                <h3 style="color:rgb(50, 164, 164);font-weight: 900px;font-size: 30px;">GET IN TOUCH</h3><br>
+                <h4 style="color: #0e5c83;">We’d love to hear from you!</h4><br>
+<p style="color: #0e5c83;">Whether you have questions about turf availability, booking assistance, payment options, or just want to share feedback — we’re here to help.</p>
+<div class="iconssoc">
+             <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-whatsapp"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-square-youtube"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+             <i class="fa-solid fa-envelope"></i>
+
+
+            </div>
+            </div>
+
+
+            
+         
+        </div>
+        <div style="margin-left: 20px;padding: 20px;">
+        <a href="mailto:jananijaan0207@gmail.com?subject=Booking Inquiry&body=Hi Janani, I’d like to book a turf slot...">
+  <button class="btn4">Reach Out</button>
+</a>
+        </div>
+    </section>
+
+<section class="con">
+    <div class="c1">
+     <h2>🕒 Operating Hours</h2>
+     <p>Monday to Sunday: 6:00 AM – 11:00 PM <br>
+Bookings available during operating hours. <br> For late-night slots, please contact us in advance.</p>
+</p><br><br>
+</div>
+ <div class="c2">
+ <h2>📍 Location</h2>
+     <p>TurfZone Madurai <br>
+123, Anna Nagar Main Road, <br>
+Madurai North, Tamil Nadu – 625020</p><br><br>
+</div>
+ <div class="c3" style="margin-top:10px;">
+ <h2>📱 Call or WhatsApp</h2>
+     <p>Phone: +91 98765 43210 <br>
+WhatsApp: Tap here to chat instantly
+</p><br><br>
+</div>
+ <div class="c3" style="margin-top: 10px;margin-right: 40px;" >
+ <h2>📧 Email</h2>
+ <p>
+General Inquiries: support@turfzonemadurai.in <br>
+Booking Help: bookings@turfzonemadurai.in
+</p>
+</div>
+ <div class="c5" style="margin-left: 20px">
+<h2>💬 Quick Message</h2>
+<p>Have a quick question? Fill out the form below and we’ll get back to you within 24 hours.</p>
+<form method="POST" action="">
+    {% csrf_token %}
+
+    <div>
+        <label for="{{ form.name.id_for_label }}">Your Name:</label>
+        {{ form.name }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.email.id_for_label }}">Your Email:</label>
+        {{ form.email }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.message.id_for_label }}">Your Message:</label>
+        {{ form.message }}
+    </div>
+    <br>
+
+    <button type="submit">Send Message</button>
+</form>
+
+
+
+
+
+
+
+</div>
+</body>
+</html>
+</section>
+
+<footer>
+    <section class="ready">
+       <h1 style="font-size: 30px;color: bisque;margin-left: 600px;">READY TO PLAY!?</h1><br><br>
+       <p style="color: whitesmoke;font-size: 30px;margin-left: 450px;">Find your turf. Book your slot. Let the games begin.
+       <div class="btn">
+        <button class="btn1" ><a href="/booking" style="text-decoration: none;
+       color: #fff;">BOOK NOW</a></button>
+
+       <button class="btn1" style="margin-left: 20px;"><a href="/allturfs" style="text-decoration: none;
+       color: #fff;">EXPLORE TURFS</a></button>
+        </div>
+</p>
+    </section>
+    </footer>
+
+    

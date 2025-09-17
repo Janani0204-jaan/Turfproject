@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     {% load static %}
+<link rel="stylesheet" href="{% static 'turfapp/css/style.css' %}">
+  <title>Payment Successful</title>
+  <style>
+      body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.s1 {
+  text-align: center;
+}
+
+.s2 {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+}
+
+.icon {
+  font-size: 60px;
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: #0072ff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005ecb;
+}
+  </style>
+</head>
+<body>
+  <div class="s1">
+    <div class="s2">
+      <div class="icon">&#10004;</div>
+      <h1>Payment Successful</h1>
+      <p>Thank you! Your booking has been confirmed.</p>
+      <a href="/new" class="btn">Go to Homepage</a>
+
+
+    </div>
+  </div>
+</body>
+</html>

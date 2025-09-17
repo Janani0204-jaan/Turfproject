@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'turfapp/css/style.css' %}">
+</head>
+<style>
+     .at1{
+             background-image: url("{% static 'bgim3.jpg' %}");
+
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 1000px;
+
+        }
+
+        .n1{
+    height: 10vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.527);
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    position: fixed;
+}
+.l1{
+    width: 150px;
+    height: 8vh;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.list li{
+    list-style: none;
+}
+
+.list a{
+    text-decoration: none;
+    padding: 20px;
+    color: whitesmoke;
+    font-weight: 500;
+     transition: transform 0.3s ease-in-out;
+
+}
+.list ul{
+    display: flex;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+.list a:hover{
+    background-color: blueviolet;
+    color: whitesmoke;
+   transform: scale(1.2);
+   border: 2px solid whitesmoke;
+
+}
+.icons{
+   
+    margin-top:25px ;
+    margin-left: 70px;
+    
+}
+.fa-square-instagram{
+    color: whitesmoke;
+    margin-left: 30px;
+    font-size: 2.1rem;
+
+}
+.fa-phone-volume{
+    color: whitesmoke;
+    margin-left: 50px;
+    font-size: 2rem;
+}
+
+.ready{
+    width: 100%;
+    height: 30vh;
+     background-image: url("{% static 'bgim1.jpg' %}");
+   
+}
+
+.btn{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 600px;
+}
+.btn1{
+      padding: 12px 28px;
+  color: #fff;
+  background-color: #111;
+  border: 2px solid #0ff;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+.btn1:hover {
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+}
+.btn1 a{
+       text-decoration: none;
+       color: #fff;
+       }
+.fill{
+    height: 800px;
+    width: 650px;
+    background-color: #fff;
+    margin-left: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid rgb(222, 38, 38);
+    background-color: grey
+
+}
+
+.fill label{
+    color: rgb(40, 21, 53);
+    font-weight: bold;
+    font-size: 20px;
+
+
+}
+.fill input{
+    border: none;
+    border-bottom: 3px solid  rgb(40, 21, 53);
+    background: transparent;
+    padding: 5px;
+    width: 100%;
+    margin: 5px;
+}
+.fill input::placeholder{
+    color: white;
+}
+.fill input:focus{
+    outline: none;
+}
+.btn2{
+      padding: 12px 28px;
+  color: #fff;
+  background-color: #111;
+  border: 2px solid #0ff;
+   box-shadow: 0 0 20px rgb(241, 177, 206), 0 0 20px rgb(239, 75, 138);
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.btn2:hover {
+   box-shadow: 0 0 30px rgb(241, 177, 206), 0 0 50px rgb(239, 75, 138);
+}
+.pay{
+    border: none;
+    border-radius:100px ;background-color:rgb(40, 21, 53) ;
+    color: whitesmoke;
+    padding: 5px;
+    cursor: pointer;
+
+}
+.pay:hover{
+    box-shadow: 0 0 20px rgb(241, 177, 206), 0 0 40px rgb(186, 24, 86);
+
+}
+#sel{
+    background-color: rgb(244, 165, 211);
+    border: none;
+}
+#paymentMethod{
+     background-color: rgb(244, 165, 211);
+    border: none;
+
+}
+#cho{
+    background-color: rgb(244, 165, 211);
+    border: none;
+}
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .n1 {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    align-items: center;
+  }
+
+  .list ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .icons {
+    margin: 10px 0;
+  }
+
+  .fill {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .btn {
+    margin-left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn1 {
+    margin: 10px;
+    font-size: 16px;
+  }
+
+  .ready h1,
+  .ready p {
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .n1 {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo img {
+    width: 100px;
+    height: auto;
+  }
+
+  .list ul {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .list a {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .icons {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .fa-square-instagram,
+  .fa-phone-volume {
+    font-size: 1.5rem;
+    margin: 0 10px;
+  }
+
+  .fill {
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .fill label {
+    font-size: 16px;
+  }
+
+  .fill input,
+  .fill select {
+    font-size: 14px;
+  }
+
+  .btn {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .btn1 {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .pay {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .at1 {
+    height: auto;
+    background-size: cover;
+    padding: 20px 0;
+  }
+}
+
+
+</style>
+<body>
+   <nav class="n1">
+            <div class="logo"><img src="{% static 'logo.jpg' %}" alt="" class="l1"></div>
+            <div class="list">
+                <ul>
+                    <li><a href="/new">HOME</a></li>
+                    <li><a href="/allturfs">ALL TURFS</a></li>
+                    <li><a href="/booking">BOOKING</a></li>
+                    <li><a href="/events">EVENTS</a></li>
+                    <li><a href="/quick-message">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="icons">
+                 <i class="fa-brands fa-square-instagram"></i>
+                 <i class="fa-solid fa-phone-volume"></i>
+                 
+            </div>
+        </nav>
+
+
+
+<!--    <section class="at1">-->
+<!--        <div class="fill" style="position: relative;top: 200px;left: 300px;">-->
+<!--            <form action="">-->
+<!--                <label for="">Name of the team  :</label><br><br>-->
+<!--                <input type="text" placeholder="ENTER THE TEAM NAME",required> <br> <br>-->
+<!--                <label for="">Choose the turf :</label><br><br>-->
+<!--                <select name="" id="cho"><option value="">The spark</option><option value=""></option><option value="">Nottam turf</option>-->
+<!--                <option value="">Golozo turf</option>-->
+<!--                <option value="">Lords turf</option>-->
+<!--                <option value="">Infinity areana cr7</option>-->
+<!--                <option value="">Y2 turf</option>-->
+<!--                <option value="">turfwar</option>-->
+<!--                <option value="">turf 59</option>-->
+<!--                <option value="">Xtream turf</option>-->
+<!--                <option value="">SPR turf</option>-->
+<!--                <option value="">Zam Zam turf</option>-->
+<!--                <option value="">Champion zone turf</option>-->
+<!--                <option value="">Lakx turf</option>-->
+<!--            </select> <br><br>-->
+<!--             <label for="">Choose the slot Timing :</label><br><br>-->
+<!--              <select name="" id="sel">-->
+<!--                <option value=""> 9.00 AM -11.00 AM</option>-->
+<!--                <option value="">11.30 AM -1.00 PM</option>-->
+<!--                <option value="">1.30 PM -3.30PM</option>-->
+<!--                <option value="">3.30 PM -5.30PM</option>-->
+<!--                <option value="">5.30 PM -7.30PM</option>-->
+<!--                <option value="">7.30 PM -9.30PM</option>-->
+<!--                <option value="">9.30 PM -12.30AM</option>-->
+<!--              </select><br><br>-->
+<!--              <label for="">TOURNAMENT</label><br><br>-->
+<!--              YES<input type="radio" name="TOURNAMENT" >-->
+<!--              NO<input type="radio" name="TOURNAMENT"><br>-->
+<!--              <input type="text" placeholder="ENTER THE TOURNAMENT NAME"><br><br>-->
+<!--              <label for="paymentMethod">Choose your payment method:</label>-->
+<!--              <select name="paymentMethod" id="paymentMethod" required>-->
+<!--    <option value="">&#45;&#45; Select Payment Method &#45;&#45;</option>-->
+<!--    <option value="card">Credit/Debit Card</option>-->
+<!--    <option value="upi">UPI (Google Pay, PhonePe, Paytm UPI)</option>-->
+<!--    <option value="netbanking">Net Banking</option>-->
+<!--    <option value="wallet">Wallets (Paytm, PhonePe, Google Pay)</option>-->
+<!--  </select>-->
+
+<!--  <br><br>-->
+<!--  <button type="submit" class="pay">Proceed to Pay</button><br><br><br><br>-->
+<!--  <button class="btn1">Save draft</button>-->
+<!--  <button class="btn1" style="margin-left: 30px;">Confirm booking</button>-->
+
+
+
+
+
+
+
+<!--            </form>-->
+
+
+
+
+
+<section class="at1">
+    <div class="fill" style="position: relative; top: 70px; left: 300px;">
+        <form method="post" action="">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+
+
+            <label for="id_team_name">Name of the team:</label><br><br>
+            {{ form.team_name.errors }}
+            {{ form.team_name }}<br><br>
+
+
+            <label for="id_turf">Choose the turf:</label><br><br>
+            <input type="text" name="turf_name" id="id_turf_name" readonly>
+
+            {{ form.turf.errors }}
+            {{ form.turf }}<br><br>
+
+            <label for="id_amount">Turf Rate (₹):</label><br><br>
+            <input type="text" id="id_turf_rate" name="amount" readonly><br><br>
+
+
+            <label for="id_slot">Choose the slot Timing:</label><br><br>
+            {{ form.slot.errors }}
+            {{ form.slot }}<br><br>
+
+
+<!--            <label for="id_is_tournament">TOURNAMENT</label><br><br>-->
+<!--            {{ form.is_tournament.errors }}-->
+<!--            {{ form.is_tournament }}<br><br>-->
+
+<!--            <label for="id_tournament_name">Enter the Tournament Name:</label><br><br>-->
+<!--            {{ form.tournament_name.errors }}-->
+<!--            {{ form.tournament_name }}<br><br>-->
+
+
+            <label for="id_payment_method">Choose your payment method:</label><br><br>
+            {{ form.payment_method.errors }}
+            {{ form.payment_method }}<br><br>
+
+
+            <button type="submit" class="pay">Proceed to Pay</button><br><br><br><br>
+            <button type="submit" name="action" value="save" class="btn2">Save draft</button>
+            <button type="submit" name="action" value="confirm" class="btn2" style="margin-left: 30px;"> <a href="/payment" style="color:white;text-decoration:none"> Confirm booking</a></button>
+        </form>
+    </div>
+</section>
+</body>
+</html>
+
+
+        </div>
+
+    </section>
+
+
+     <section class="ready">
+       <h1 style="font-size: 30px;color: bisque;margin-left: 600px;">READY TO PLAY!?</h1><br><br>
+       <p style="color: whitesmoke;font-size: 30px;margin-left: 450px;position: relative;bottom: 50px;">Find your turf. Book your slot. Let the games begin.
+       <div class="btn">
+        <button class="btn1 " style="position: relative;bottom: 50px;"><a href="/booking">BOOK NOW</a></button>
+
+        <button class="btn1" style="margin-left: 20px;position:relative;bottom:50px"><a href="/allturfs" style="text-decoration: none;
+       color: #fff;">EXPLORE TURFS</a></button>
+        </div>
+</p>
+    </section>
+
+<script>
+    const turfRates = {
+        {% for turf in turfs %}
+            "{{ turf.id }}": {{ turf.rate }},
+        {% endfor %}
+    };
+
+    const turfSelect = document.getElementById("id_turf");
+    const amountField = document.getElementById("id_amount");
+
+    turfSelect.addEventListener("change", function() {
+        const selectedTurfId = this.value;
+        const rate = turfRates[selectedTurfId];
+        amountField.value = rate ? rate.toFixed(2) : "";
+    });
+
+
+
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const turfName = urlParams.get('turf_name');
+    const turfRate = urlParams.get('turf_rate');
+
+    if (turfName && turfRate) {
+        document.getElementById('id_turf_name').value = turfName;
+        document.getElementById('id_turf_rate').value = turfRate;
+    }
+};
+
+</script>
+</body>
+</html>

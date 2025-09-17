@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+   <link rel="stylesheet" href="{% static 'turfapp/css/style.css' %}">
+    <style>
+        .at1{
+            background-image: url("{% static 'bgim2.jpeg' %}");
+            width: 100%;
+            height: 2500px;
+            margin-top: 100px;
+
+        }
+
+       .at2{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+        padding: 10px;
+       }
+
+        .at3{
+            background-color: whitesmoke;
+            height: 450px;
+            width: 400px;
+            margin-left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+             transition: transform 0.3s ease-in-out;
+        
+        }
+
+        .at3 :hover{
+            transform: scale(1.1);
+        }
+        .imgg3{
+             height: 200px;
+            width: 250px;
+        
+        }
+
+        button{
+            border: none;
+            border-radius: 50px;
+            background-color: olivedrab;
+            color: whitesmoke;
+            cursor: pointer;
+           
+
+        }
+
+        button:hover{
+                 box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+;
+            
+        }
+
+        .n1{
+    height: 10vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.527);
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    position: fixed;
+}
+.l1{
+    width: 150px;
+    height: 8vh;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.list li{
+    list-style: none;
+}
+
+.list a{
+    text-decoration: none;
+    padding: 20px;
+    color: whitesmoke;
+    font-weight: 500;
+     transition: transform 0.3s ease-in-out;
+
+}
+.list ul{
+    display: flex;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+.list a:hover{
+    background-color: blueviolet;
+    color: whitesmoke;
+   transform: scale(1.2);
+   border: 2px solid whitesmoke;
+
+}
+.icons{
+   
+    margin-top:25px ;
+    margin-left: 70px;
+    
+}
+.fa-square-instagram{
+    color: whitesmoke;
+    margin-left: 30px;
+    font-size: 2.1rem;
+
+}
+.fa-phone-volume{
+    color: whitesmoke;
+    margin-left: 50px;
+    font-size: 2rem;
+}
+
+.ready{
+    width: 100%;
+    height: 30vh;
+     background-image: url("{% static 'bgim1.jpeg' %}");
+   
+}
+
+.btn{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 600px;
+}
+.btn1{
+      padding: 12px 28px;
+  color: #fff;
+  background-color: #111;
+  border: 2px solid #0ff;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+
+}
+.btn1:hover {
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+}
+
+.btn1 a{
+       text-decoration: none;
+       color: #fff;
+       }
+
+.img3 a{
+        text-decoration: none;
+        color: whitesmoke;
+
+}
+
+.img3 a:hover{
+        color: rgb(64, 64, 222);
+}
+.fill{
+    height: 500px;
+    width: 450px;
+    background-color: #fff;
+    margin-left: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid rgb(222, 38, 38);
+    background-color: grey
+
+}
+
+.fill label{
+    color: rgb(40, 21, 53);
+    font-weight: bold;
+    font-size: 20px;
+
+
+}
+.fill input{
+    border: none;
+    border-bottom: 3px solid  rgb(40, 21, 53);
+    background: transparent;
+    padding: 5px;
+    width: 100%;
+    margin: 5px;
+}
+.fill input::placeholder{
+    color: white;
+}
+.fill input:focus{
+    outline: none;
+}
+.btn1{
+      padding: 12px 28px;
+  color: #fff;
+  background-color: #111;
+  border: 2px solid #0ff;
+   box-shadow: 0 0 20px rgb(241, 177, 206), 0 0 20px rgb(239, 75, 138);
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.btn1:hover {
+   box-shadow: 0 0 30px rgb(241, 177, 206), 0 0 50px rgb(239, 75, 138);
+}
+.pay{
+    border: none;
+    border-radius:100px ;background-color:rgb(40, 21, 53) ;
+    color: whitesmoke;
+    padding: 5px;
+    cursor: pointer;
+
+}
+.pay:hover{
+    box-shadow: 0 0 20px rgb(241, 177, 206), 0 0 40px rgb(186, 24, 86);
+
+}
+#sel{
+    background-color: rgb(244, 165, 211);
+    border: none;
+}
+#paymentMethod{
+     background-color: rgb(244, 165, 211);
+    border: none;
+
+}
+#cho{
+    background-color: rgb(244, 165, 211);
+    border: none;
+}
+.att{
+             background-image: url("{% static 'bgim3.jpg' %}");
+
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 1000px;
+
+        }
+
+
+        /* Mobile devices (up to 600px) */
+@media screen and (max-width: 600px) {
+  .at2 {
+    grid-template-columns: 1fr;
+    padding: 5px;
+  }
+
+  .at3 {
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+  }
+
+  .fill {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .btn {
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn1 {
+    margin: 10px 0;
+  }
+
+  .list ul {
+    flex-direction: column;
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .icons {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .ready,
+  .att {
+    height: auto;
+    background-size: cover;
+  }
+
+  .n1 {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+/* Tablets (601px to 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .at2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .at3 {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .fill {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .list ul {
+    margin-left: 50px;
+  }
+
+  .ready,
+  .att {
+    height: auto;
+    background-size: cover;
+  }
+}
+
+    </style>
+</head>
+<body>
+{% load static %}
+<link rel="stylesheet" href="{% static 'turf.css' %}"></link>
+         <nav class="n1">
+            <div class="logo"><img src="{% static 'logo.jpg' %}" alt="" class="l1"></div>
+            <div class="list">
+                <ul>
+                    <li><a href="/new">HOME</a></li>
+                    <li><a href="/allturfs">ALL TURFS</a></li>
+                    <li><a href="/book">BOOKING</a></li>
+                    <li><a href="/events">EVENTS</a></li>
+                    <li><a href="/quick-message">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="icons">
+                 <i class="fa-brands fa-square-instagram"></i>
+                 <i class="fa-solid fa-phone-volume"></i>
+                 
+            </div>
+        </nav>
+
+
+
+
+
+
+    <section class="at1">
+        <h1 style="color: whitesmoke;font-weight: bold;margin-left: 500px; font-size: 50px;">EXPLORE TURFS</h1>
+        <div class="at2">
+
+
+            <div class="at3">
+                <div class="img3">
+                    <div style="border: 5px solid black;height: 200px;
+            width: 250px; margin-left: 50px">
+                    <img src="{% static 'sparkturf.jpeg' %}" alt="" class="imgg3">
+                    </div>
+                    <h1 style="margin-left: 50px;">THE SPARK TURF</h1> <br>
+                    <p style="margin-left: 40px;">LOCATION : Near Decathlon, Narasingam, Madurai
+
+</p>
+                    <p style="margin-left: 40px;">RATING : ⭐⭐⭐⭐☆ (4.9) </p>
+                    <button  style="margin-left: 60px;"><a href="https://www.playspots.in/booking-spot/the-sparks-multisports-near-decathlon-narasingam-madurai-tamil-nadu/">Know more</a></button>
+                   <button style="margin-left: 60px;">
+  <a href="/booking?turf_name=THE SPARK TURF&turf_rate=1200">Book Now</a>
+</button>
+                
+            </div>
+        </div>
+
+
+         <div class="at3">
+                <div class="img3">
+                    <div style="border: 5px solid black;height: 200px;
+            width: 250px; margin-left: 50px">
+                    <img src="{% static 'nottam turf.jpeg' %}" alt="" class="imgg3">
+                    </div>
+                    <h1 style="margin-left: 50px;">THE NOTTAM TURF</h1> <br>
+                    <p style="margin-left: 40px;">LOCATION : Kulamangalam Main Road, LIC Colony, Madurai
+ (5.0)
+</p>
+                    <p style="margin-left: 40px;">RATING : ⭐⭐⭐⭐⭐ (5.0)
+ </p>
+                    <button  style="margin-left: 60px;"><a href="https://www.bing.com/ck/a?!&&p=234973b2070bf2c0be987abb79d1aa2f5ee762e1c35320a48a845f3f73cbe91dJmltdHM9MTc1NTk5MzYwMA&ptn=3&ver=2&hsh=4&fclid=361a8fc6-0e83-65c3-2b4d-99ef0f2e6403&psq=nottam+turf+images+%2c+bbkulM&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9ub3R0YW1fdHVyZi8&ntb=1">Know more</a></button>
+                    <button style="margin-left: 60px;">
+  <a href="/booking?turf_name=THE NOTTAM TURF&turf_rate=1000">Book Now</a>
+</button>
+            </div>
+        </div>
+
+
+
+         <div class="at3">
+                <div class="img3">
+                    <div style="border: 5px solid black;height: 200px;
+            width: 250px; margin-left: 50px">
+                    <img src="{% static 'golozo turf.jpg' %}" alt="" class="imgg3">
+                    </div>
+                    <h1 style="margin-left: 50px;">GOLOZO TURF</h1> <br>
+                    <p style="margin-left: 40px;">LOCATION : Poriyalar Nagar, Tiruppalai, Madurai</p>
+                    <p style="margin-left: 40px;">RATING : ⭐⭐⭐⭐☆ (4.5) </p>
+                    <button  style="margin-left: 60px;"><a href="https://www.bing.com/ck/a?!&&p=339baf249ae149b838e853f47d6e24b66fde2e3a6f8b5f926fe616be1c2b8313JmltdHM9MTc1NzYzNTIwMA&ptn=3&ver=2&hsh=4&fclid=361a8fc6-0e83-65c3-2b4d-99ef0f2e6403&psq=golozo+turf+madurai&u=a1aHR0cHM6Ly93d3cucGxheXNwb3RzLmluL2Jvb2tpbmctc3BvdC9nb2xhem8tdHVyZi1wb3JpeWFsYXItbmFnYXItdGlydXBwYWxhaS1tYWR1cmFpLw">Know more</a> </button>
+                    <button style="margin-left: 60px;">
+  <a href="/booking?turf_name=THE GOLOZO TURF&turf_rate=1100">Book Now</a>
+</button>
+                
+            </div>
+        </div>
+
+
+
+
+         <div class="at3">
+                <div class="img3">
+                    <div style="border: 5px solid black;height: 200px;
+            width: 250px; margin-left: 50px">
+                    <img src="{% static 'lords turf.jpeg' %}"  alt="" class="imgg3">
+                    </div>
+                    <h1 style="margin-left: 50px;">LORDS TURF</h1> <br>
+                    <p style="margin-left: 40px;">LOCATION : Kalainagar, Thanakkankulam, Madurai
+
+</p>
+                    <p style="margin-left: 40px;">RATING : ⭐ ⭐ ⭐ ⭐ ⭐(5.0) </p>
+                    <button  style="margin-left: 60px;"><a href="https://www.bing.com/ck/a?!&&p=ce62ec3a35d93d7cd7ff426433cd22c4ae144ff950a0a4e99cb7b68918066b6eJmltdHM9MTc1NzYzNTIwMA&ptn=3&ver=2&hsh=4&fclid=361a8fc6-0e83-65c3-2b4d-99ef0f2e6403&psq=lords+turf+madurai&u=a1aHR0cHM6Ly93d3cucGxheXNwb3RzLmluL2Jvb2tpbmctc3BvdC9sb3Jkcy1rYWxhaS1uYWdhci0ybmQtc3RyZWV0LXRoYW5ha2thbmt1bGFtLW1hZHVyYWkv">Know more</a></button>
+                   <button style="margin-left: 60px;">
+  <a href="/booking?turf_name=THE LORDS TURF&turf_rate=1000">Book Now</a>
+</button>
+            
+            </div>
+        </div>
+
+
+
+         <div class="at3">
+                <div class="img3">
+                    <div style="border: 5px solid black;height: 200px;
+            width: 250px; margin-left: 50px">
+                    <img src="{% static 'InfintiyArenaCR7LyrVXHQSXJ.jpeg' %}" alt="" class="imgg3">
+                    </div>
+                    <h1 style="margin-left: 50px;">INFINITY AREANA cr7 TURF</h1> <br>
+                    <p style="margin-left: 40px;">LOCATION : Theni Main Road, Virattipathu, Madurai</p>
+                    <p style="margin-left: 40px;">RATING : ⭐⭐⭐⭐☆ (4.7) </p>
+                    <button  style="margin-left: 60px;"><a href="https://www.bing.com/ck/a?!&&p=d5cf4f3496ee24eafaa495e81836fea46e51c4e4360a83b4edce560451ad7ad1JmltdHM9MTc1NzYzNTIwMA&ptn=3&ver=2&hsh=4&fclid=361a8fc6-0e83-65c3-2b4d-99ef0f2e6403&psq=infinity+arena+turf+madurai&u=a1aHR0cHM6Ly93d3cucGxheXNwb3RzLmluL2Jvb2tpbmctc3BvdC9mb290YmFsbC1jcmlja2V0LWdyb3VuZC1tYWR1cmFpLw">Know more</a><button>
+                   <button style="margin-left: 60px;">
+  <a href="/booking?turf_name=INFINITY AREANA cr7 TURF&turf_rate=1200">Book Now</a>
+</button>
+              </div>
+         </div>
+
+
+
+
+         <div class="at3">
+                <div class="img3">
+                    <div style="border: 5px solid black;height: 200px;
+            width: 250px; margin-left: 50px">
+                    <img src="{% static 'y2 turf.jpg' %}" alt="" class="imgg3">
+                    </div>
+                    <h1 style="margin-left: 50px;">Y2 TURF</h1> <br>
+                    <p style="margin-left: 40px;">LOCATION : Vandiyur Main Road, Masthanpatti, Madurai
+
+</p>
+                    <p style="margin-left: 40px;">RATING : ⭐⭐⭐⭐☆ (4.7) </p>
+                    <button  style="margin-left: 60px;"><a href="https://www.bing.com/ck/a?!&&p=c03f9f911cb6207d225a1df729d65943331c804e2c95be23f2b198b2763a4afcJmltdHM9MTc1NzYzNTIwMA&ptn=3&ver=2&hsh=4&fclid=361a8fc6-0e83-65c3-2b4d-99ef0f2e6403&psq=y2+turf+madurai&u=a1aHR0cHM6Ly9jcmljaGVyb2VzLmNvbS9jcmlja2V0LWdyb3VuZC1kZXRhaWwvNjA5NTMwL21hZHVyYWkveTItdHVyZg">Know more</a> </button>
+                   <button style="margin-left: 60px;">
+  <a href="/booking?turf_name=THE Y2 TURF&turf_rate=1000">Book Now</a>
+</button>
+                
+            </div>
+        </div>
+
+           <div class="at3">
+                <div class="img3">
+                    <div style="border: 5px solid black;height: 200px;
+            width: 250px; margin-left: 50px">
+                    <img src="{% static 'turfwar.jpg' %}" alt="" class="imgg3">
+                    </div>
+                    <h1 style="margin-left: 50px;">TURFWAR TURF</h1> <br>
+                    <p style="margin-left: 40px;">LOCATION :  Near Seventh Day School, Kochadai, Madurai
+
+
+
+
+
+</p>
+                    <p style="margin-left: 40px;">RATING : ⭐⭐⭐⭐☆ (4.6) </p>
+                    <button  style="margin-left: 60px;"><a href="https://www.bing.com/ck/a?!&&p=7ddce563fe26e335c9543a06398e1088fa1244a39358d4c724beb0023b87e80eJmltdHM9MTc1NzYzNTIwMA&ptn=3&ver=2&hsh=4&fclid=361a8fc6-0e83-65c3-2b4d-99ef0f2e6403&psq=turf+war+madurai&u=a1aHR0cHM6Ly93d3cudHVyZndhcmluZGlhLmluLw">Know more</a></button>
+                    <button style="margin-left: 60px;">
+  <a href="/booking?turf_name=THE TURFWAR TURF&turf_rate=1200">Book Now</a>
+</button>
+                
+            </div>
+        </div>
+
+        <div class="at3">
+                <div class="img3">
+                    <div style="border: 5px solid black;height: 200px;
+            width: 250px; margin-left: 50px">
+                    <img src="{% static 'turf 59.jpg' %}" alt="" class="imgg3">
+                    </div>
+                    <h1 style="margin-left: 50px;">TURF 59</h1> <br>
+                    <p style="margin-left: 40px;">LOCATION : Rama Krishna Nagar, Tirumohur, Madurai</p>
+                    <p style="margin-left: 40px;">RATING : ⭐⭐⭐⭐☆ (4.9) </p>
+                    <button  style="margin-left: 60px;"><a href="https://www.bing.com/ck/a?!&&p=ad34c5538cfbd065ac4c472f10ee781ea8edbabdaaedfa1a7fa76fc919612282JmltdHM9MTc1NzYzNTIwMA&ptn=3&ver=2&hsh=4&fclid=361a8fc6-0e83-65c3-2b4d-99ef0f2e6403&psq=turf+59+turf+madurai&u=a1aHR0cHM6Ly9jcmljaGVyb2VzLmNvbS9jcmlja2V0LWdyb3VuZC1kZXRhaWwvNzE3OTcxL21hZHVyYWkvdHVyZi01OQ"> Know more</a></button>
+                   <button style="margin-left: 60px;">
+  <a href="/booking?turf_name= TURF59&turf_rate=1100">Book Now</a>
+</button>
+                
+            </div>
+        </div>
+
+
+        <div class="at3">
+                <div class="img3">
+                    <div style="border: 5px solid black;height: 200px;
+            width: 250px; margin-left: 50px">
+                    <img src="{% static 'xtreame.jpg' %}" alt="" class="imgg3">
+                    </div>
+                    <h1 style="margin-left: 50px;">Xtream TURF</h1> <br>
+                    <p style="margin-left: 40px;">LOCATION : TTC Nagar, Lake Area Main Road, Madurai
+
+</p>
+                    <p style="margin-left: 40px;">RATING : ⭐⭐⭐⭐☆ (4.5) </p>
+                    <button  style="margin-left: 60px;"><a href="https://www.bing.com/ck/a?!&&p=0e147ab6ce255293288dfb16261ff41657c5e63bf84ecc19254533498e413c50JmltdHM9MTc1NzYzNTIwMA&ptn=3&ver=2&hsh=4&fclid=361a8fc6-0e83-65c3-2b4d-99ef0f2e6403&psq=Xtreme+turf+madurai&u=a1aHR0cHM6Ly94dHJlbWVzcG9ydHNhcmVuYS5jb20v"> Know more</a></button>
+                   <button style="margin-left: 60px;">
+  <a href="/booking?turf_name=Xtream TURF&turf_rate=1200">Book Now</a>
+</button>
+                
+            </div>
+        </div>
+
+
+        <div class="at3">
+                <div class="img3">
+                    <div style="border: 5px solid black;height: 200px;
+            width: 250px; margin-left: 50px">
+                    <img src="{% static 'spr turf.jpg' %}" alt="" class="imgg3">
+                    </div>
+                    <h1 style="margin-left: 50px;">SPR turf</h1> <br>
+
+
+                    <p style="margin-left: 40px;">LOCATION :  Burma Colony Road, Thathaneri, Madurai
+
+</p>
+                    <p style="margin-left: 40px;">RATING : ⭐⭐⭐⭐☆ (4.5) </p>
+                    <button  style="margin-left: 60px;"><a href="https://www.bing.com/ck/a?!&&p=2625464041ec938cf2ddeb00d5147d2135df3c9193035578ae9e2724f7db2b75JmltdHM9MTc1NzYzNTIwMA&ptn=3&ver=2&hsh=4&fclid=361a8fc6-0e83-65c3-2b4d-99ef0f2e6403&psq=spr+turf+%2cmadurai&u=a1aHR0cHM6Ly93d3cucGxheXNwb3RzLmluL2Jvb2tpbmctc3BvdC9zcHItbXVsdGlzcG9ydC10dXJmLXJhbWFjaGFuZHJhLW5hZ2FyLWtlZWxhdmFpdGhpeWFuYXRoYXB1cmFtLXRoYXRoYW5lcmktbWFkdXJhaS8"> Know more</a></button>
+                    <button style="margin-left: 60px;">
+  <a href="/booking?turf_name=THE SPR TURF&turf_rate=1000">Book Now</a>
+</button>
+
+
+                
+            </div>
+        </div>
+
+
+
+        <div class="at3">
+                <div class="img3">
+                    <div style="border: 5px solid black;height: 200px;
+            width: 250px; margin-left: 50px">
+                    <img src="{% static 'zamzam.jpg' %}" alt="" class="imgg3">
+                    </div>
+                    <h1 style="margin-left: 50px;">ZAM ZAM TURF</h1> <br>
+                    <p style="margin-left: 40px;">LOCATION : Silaiman, Madurai-Mandapam Highway
+
+</p>
+                    <p style="margin-left: 40px;">RATING : ⭐⭐⭐⭐☆ (4.8) </p>
+                    <button  style="margin-left: 60px;"><a href="https://www.bing.com/ck/a?!&&p=cadfd447cdfb7cf6a22fb839a9bb29165fc65b0bee9678340854b2e7c1e77d67JmltdHM9MTc1NzYzNTIwMA&ptn=3&ver=2&hsh=4&fclid=361a8fc6-0e83-65c3-2b4d-99ef0f2e6403&psq=zam+zam+turf+madurai&u=a1aHR0cHM6Ly96YW16YW1zcG9ydHNhcmVuYS5jb20v" >Know more</a></button>
+                   <button style="margin-left: 60px;">
+  <a href="/booking?turf_name=THE ZAM ZAM TURF&turf_rate=1200">Book Now</a>
+</button>
+                
+            </div>9
+        </div>
+
+        `
+        <div class="at3">
+                <div class="img3">
+                    <div style="border: 5px solid black;height: 200px;
+            width: 250px; margin-left: 50px">
+                    <img src="{% static 'champ turf.jpg' %}" alt="" class="imgg3">
+                    </div>
+                    <h1 style="margin-left: 50px;">CHAMPION ZONE TURF</h1> <br>
+                    <p style="margin-left: 40px;">LOCATION : Viraganur, Madurai-Mandapam Highway
+
+</p>
+                    <p style="margin-left: 40px;">RATING : ⭐⭐⭐⭐☆ (4.6) </p>
+                    <button  style="margin-left: 60px;"><a href="https://www.bing.com/ck/a?!&&p=ff7f147feb66802a85fa8076fce200528294ec85b32817e4d3ebbd03d759fcedJmltdHM9MTc1NzYzNTIwMA&ptn=3&ver=2&hsh=4&fclid=361a8fc6-0e83-65c3-2b4d-99ef0f2e6403&psq=champion+zone+turf+madurai&u=a1aHR0cHM6Ly9jcmljaGVyb2VzLmNvbS9jcmlja2V0LWdyb3VuZC1kZXRhaWwvODc5Mjg2L21hZHVyYWkvY2hhbXBpb24tem9uZS10dXJm"> Know more</a></button>
+                    <button style="margin-left: 60px;">
+  <a href="/booking?turf_name=THE CHAMPION ZONE TURF&turf_rate=1100">Book Now</a>
+</button>
+                
+            </div>
+        </div>
+
+
+         <div class="at3">
+                <div class="img3">
+                    <div style="border: 5px solid black;height: 200px;
+            width: 250px; margin-left: 50px">
+                    <img src="{% static 'lakx turf.jpg' %}" alt="" class="imgg3">
+                    </div>
+                    <h1 style="margin-left: 50px;">THE LAKX TURF</h1> <br>
+                    <p style="margin-left: 40px;">LOCATION : NH38, Soorakundu Vilaku, Melur
+
+</p>
+                    <p style="margin-left: 40px;">RATING : ⭐⭐⭐⭐⭐ (5.0) </p>
+                    <button  style="margin-left: 60px;"><a href="https://www.bing.com/ck/a?!&&p=4a86bcf8ef3de984b800a58e9618aa16f70de4fc7c33c3ae8fab5c2ee2448797JmltdHM9MTc1NzYzNTIwMA&ptn=3&ver=2&hsh=4&fclid=361a8fc6-0e83-65c3-2b4d-99ef0f2e6403&psq=lakx+turf+madurai&u=a1aHR0cHM6Ly9sYWt4NTkuY29tLw"> Know more</a></button>
+                  <button style="margin-left: 60px;">
+  <a href="/booking?turf_name=THE LAKX TURF&turf_rate=1000">Book Now</a>
+</button>
+        </div>
+        </div>
+        </div>
+
+
+
+<!--        <div class="book">-->
+
+<!--       {% for i in a %}-->
+<!--        <form method="post" action="">-->
+<!--            {% csrf_token %}-->
+
+<!--          <label>Turf Name:</label><br />-->
+<!--            {{i.turfname}}-->
+<!--            <label>Price:</label><br />-->
+<!--            {{i.price}}-->
+<!--            <label>Your name :</label><br />-->
+<!--            {{i.yourname}}-->
+<!--            <label>Email:</label><br />-->
+<!--            {{i.email}}-->
+
+
+
+<!--        </form>-->
+<!--        {% endfor %}-->
+
+<!--   </div>-->
+
+
+    </section>
+
+
+
+<!--<section class="att">-->
+
+
+<!--<form method="post" id="bookingForm">-->
+<!--    {% csrf_token %}-->
+<!--    {{ form.team_name }}-->
+<!--    <input type="text" name="turf_name" id="turfName" readonly>-->
+<!--    <input type="text" name="turf_rate" id="turfRate" readonly>-->
+<!--    {{ form.slot }}-->
+<!--    <button type="submit">Confirm Booking</button>-->
+<!--</form>-->
+
+
+<!--    <div class="fill" style="position: relative;left: 300px;bottom:500px">-->
+<!--        <form method="post" action="">-->
+<!--            {% csrf_token %}-->
+<!--            {{ form.non_field_errors }}-->
+
+
+<!--            <label for="id_team_name">Name of the team:</label><br><br>-->
+<!--            {{ form.team_name.errors }}-->
+<!--            {{ form.team_name }}<br><br>-->
+
+
+<!--            <label for="id_turf">Choose the turf:</label><br><br>-->
+<!--            {{ form.turf.errors }}-->
+<!--            {{ form.turf }}<br><br>-->
+
+<!--            <label for="id_amount">Turf Rate (₹):</label><br><br>-->
+<!--            <input type="text" id="id_amount" name="amount" readonly><br><br>-->
+
+
+<!--            <label for="id_slot">Choose the slot Timing:</label><br><br>-->
+<!--            {{ form.slot.errors }}-->
+<!--            {{ form.slot }}<br><br>-->
+
+
+<!--            <button type="submit" name="action" value="confirm" class="btn1" style="margin-left: 30px;"> <a href="/payment"> Confirm booking</a></button>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</section>-->
+
+
+
+
+ <section class="ready">
+       <h1 style="font-size: 30px;color: bisque;margin-left: 600px;">READY TO PLAY!?</h1><br><br>
+       <p style="color: whitesmoke;font-size: 30px;margin-left: 450px;position: relative;bottom:20px">Find your turf. Book your slot. Let the games begin.
+       <div class="btn">
+        <button class="btn1 " style="position: relative;bottom: 50px;"><a href="/book">BOOK NOW</a></button>
+
+         <button class="btn1" style="margin-left: 20px;position:relative;bottom:50px"><a href="/allturfs" style="text-decoration: none;
+       color: #fff;">EXPLORE TURFS</a></button>
+        </div>
+</p>
+    </section>
+
+<!--<script>-->
+<!--function populateBookingForm(name, rate) {-->
+<!--    document.getElementById('bookingForm').style.display = 'block';-->
+<!--    document.getElementById('turfName').value = name;-->
+<!--    document.getElementById('turfRate').value = rate;-->
+<!--}-->
+<!--</script>-->
+
+
+</body>
+</html>
